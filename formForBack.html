@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> 
+    <link rel="stylesheet" href="css/formForBack.css"> 
+    <link rel="stylesheet" href="css/fonts.css"> 
+    <title>Forms</title> 
+</head> 
+<body> 
+    <section class="running"> 
+        <div class="container"> 
+            <a href="#"><div class="running_exit_link"></div></a> 
+            <div class="running_left"></div> 
+            <div class="running_right"> 
+                <div class="running_right_title"> 
+                    Жүгіруден марафонға қатыс! Өз бағыңды сына,TURAN-мен бірге өмірлік су балансыңды ретке келтір! 
+                </div> 
+    
+                <div class="running_right_description"> 
+                    <form action="php/check.php" method="post"> 
+                        <label for="fname">Есімің:</label><input type="text" id="fname" name="fname" placeholder="Yeldos"><br> 
+                        <label for="lname">Тегің:</label>   <input type="text" id="lname" name="lname" placeholder="Anarbayev"><br> 
+                        <label for="gender">Жынысың:</label> <input type="text" id="gender" name="gender" placeholder="Male"> <br> 
+                        <label for="weight">Салмағың:</label> <input type="number" id="weight" name="weight"> <br> 
+                        <label for="id">Жеке куәлік номерің:</label> <input type="number" id="id" name="id" placeholder="21010234"><br> 
+                        <label for="birthday">Туған күнің:</label> <input type="date" id="birthday" name="birthday" placeholder="mm/dd/yyyy"><br> 
+                        <label for="ph_number">Ұялы телефоның:</label> <input type="number" id="ph_number" name="ph_number" placeholder="+7 777 77 77"> <br> 
+                         
+                        <div class="running_right_description_subtitle">Өз күшіңді көрсетететін кез келді, төменде берілген арақашықтықты таңда да, сыйлық көлемін көбейт !</div> 
+ 
+                        <div class="running_right_description_threeWay"> 
+                            <input type="radio" id="running_way_1" name="km" value="tenth"> 
+                            <label for="running_way_1"> 10км-ге жүгіру</label> 
+ 
+                            <input type="radio" id="running_way_2" name="km" value="quarter"> 
+                            <label for="running_way_2"> 25км-ге жүгіру </label> 
+                             
+                            <input type="radio" id="running_way_3" name="km" value="half"> 
+                            <label for="running_way_3"> 50км-ге жүгіру</label> 
+                        </div> 
+ 
+                        <input type="submit" value="Submit" class="running_right_description_btn"> 
+                    </form> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+</body> 
+</html>

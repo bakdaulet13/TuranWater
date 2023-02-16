@@ -1,0 +1,104 @@
+
+* { 
+  font-size: 18px; 
+  font-family: 'Montserrat Alternates',sans-serif; 
+  font-weight: bold; 
+  letter-spacing: -0.24px; 
+} 
+ 
+.running { 
+  background: url("../img/forBack/fromTheSun.jpg"); 
+  background-repeat: no-repeat; 
+  background-size: 1540px; 
+  background-position-x: left; 
+  position: absolute; 
+  width: 100%; 
+} 
+ 
+.running { 
+  height: 100vh; 
+} 
+ 
+.running .container { 
+  border-radius: 30px; 
+  background-color: #00a0df; 
+  width: 700px; 
+  height: 500px; 
+  margin: 240px 0 0 800px; 
+  display: flex; 
+  position: relative; 
+} 
+ 
+.running_exit_link{ 
+  position: absolute; 
+  width: 110px; 
+  height: 70px; 
+  left: 26px; 
+  top: 10px; 
+  background: url('../img/main_page/logo/logo_turan_white.svg') no-repeat; 
+} 
+.running_exit_link::before{ 
+  content: "Exit"; 
+  color: white; 
+  font-size: 16px; 
+  display: block; 
+  position: absolute; 
+  left: 43px; 
+  top: 400px; 
+} 
+ 
+.running_left { 
+  width: 300px; 
+  background: url("../img/assortment_page/premium-water-dark.png") no-repeat; 
+  background-size: 110px; 
+  background-position-x: center; 
+  background-position-y: center; 
+} 
+ 
+.running_right { 
+  padding: 20px; 
+} 
+ 
+.running_right_title { 
+  height: 50px; 
+  text-align: center; 
+  border-radius: 50px; 
+} 
+ 
+.running_right_description { 
+  margin-top: 30px; 
+} 
+ 
+.running_right_description form input { 
+  margin-bottom: 10px; 
+  border-radius: 10px; 
+} 
+ 
+.running_right_description form label:hover { 
+  color: #00a0df; 
+  -webkit-text-stroke: 1px white; 
+} 
+ 
+.running_right_description_subtitle { 
+  height: 40px; 
+  color: whitesmoke; 
+  margin-bottom: 20px; 
+} 
+ 
+.running_right_description_threeWay { 
+  margin-bottom: 10px; 
+} 
+ 
+.running_right_description_btn { 
+  height: 40px; 
+  width: 80px; 
+  border-radius: 10px; 
+  color: #00a0df; 
+  display: block; 
+  margin: 0 auto; 
+} 
+ 
+.running_right_description_btn:hover { 
+  color: white; 
+  -webkit-text-stroke: 1px #00a0df; 
+}

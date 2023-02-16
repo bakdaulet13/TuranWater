@@ -1,0 +1,773 @@
+body {
+  font-family: 'Museo Sans Cyrl 300';
+  letter-spacing: -0.24px;
+  position: relative;
+  color: #182438;
+}
+
+.burger .burger_logo{
+  display: none;
+  position: fixed;
+  width: 106px;
+  height: 54px;
+  top: 40px;
+  left: 77px;
+  z-index: 101;
+  background: url("../img/main_page/logo/logo_turan.svg") no-repeat 50%/cover;
+}
+
+.burger .burger_social_link{
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 105px;
+  z-index: 101;
+}
+
+.burger .burger_social_link a img{
+  height: 22px;
+  width: 22px;
+}
+
+.burger .burger_social_link a img:first-child{
+  margin-right: 25px;
+}
+
+#burger, [for=burger]{
+  cursor: pointer;
+  display: none;
+}
+
+[for=burger]{
+  display: block;
+  width: 30px;
+  font-size: 50px;
+  text-align: center;
+  position: fixed;
+  left: 115px;
+  top: 17px;
+  z-index: 101;
+}
+
+[for=burger]::before{
+  content: '=';
+  color: white;
+}
+
+.burger nav{
+  display: none;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  border: 3px solid orange;
+}
+
+.burger nav ul{
+  text-align: center;
+  margin-top: 180px;
+  padding: 0;
+  list-style-type: none;
+  user-select: none;
+}
+
+.burger nav ul li{
+  margin-bottom: 33px;
+}
+
+.burger nav ul li a{
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: -0.24px;
+  text-decoration: none;  
+  color: #002856;
+  -webkit-text-stroke: 1px #002856;
+  font-family: 'Montserrat Alternates',sans-serif;
+  opacity: 1;
+}
+
+.burger nav ul > li:first-child a{
+  color: #00a0df;
+  -webkit-text-stroke: 1px #00a0df;
+}
+
+.burger nav ul li a:hover{
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+
+#burger:checked + label + nav{
+  display: block;
+  animation: show .5s ease;
+}
+
+#burger:checked + label + nav + .burger_logo{
+  display: block;
+}
+
+#burger:checked + label + nav + .burger_logo + .burger_social_link{
+  display: block;
+}
+
+
+#burger:checked + [for=burger]::before{
+  content: 'X';
+  position: fixed;
+  font-size: 20px;
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  top: -50px;
+  right: -58px;
+  padding-top: 110px;
+  padding-right: 40px;
+  cursor: pointer;
+  color: #00a0df;
+
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  background: url("../img/main_page/btn_wave_dark.svg") no-repeat;
+
+}
+
+
+@keyframes show{
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+
+
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+  transition: opacity 0.5s ease-out;
+}
+
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100px;
+  transition: all .5s ease-out;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) -59.23%, rgba(0, 0, 0, 0));
+}
+
+header .container .header_logo {
+  position: absolute;
+  z-index: 35;
+  display: block;
+  left: 46.5%;
+  background: url("../img/main_page/logo/logo_turan.svg") no-repeat 50%/cover;
+  width: 106px;
+  height: 54px;
+}
+
+nav {
+  padding-top: 86px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+nav .container {
+  padding: 0 15px;
+  margin: 0 56.6px;
+}
+
+nav .container ul {
+  display: flex;
+  letter-spacing: -0.24px;
+  list-style: none;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  color: #182438;
+  margin-right: 25px;
+}
+
+nav .container ul li .main_page {
+  z-index: 36;
+  opacity: 0.5;
+  position: relative;
+}
+
+nav .container ul li .main_page:hover {
+  opacity: 1.0;
+}
+
+nav .container ul li .main_page::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #182438;
+  position: absolute;
+  left: 50px;
+  top: 8px;
+  margin: 0 12px;
+}
+
+.science_materials_texts {
+  padding-bottom: 45px;
+}
+
+.science_materials_texts .container {
+  margin: 0 56.6px;
+  padding: 0 15px;
+}
+
+.science_materials_texts_wrap {
+  display: flex;
+}
+
+.science_materials_texts_wrap_title {
+  max-width: 60%;
+  padding-right: 30px;
+  color: #002856;
+  margin: 0 0 50px;
+  font-family: 'Montserrat Alternates';
+  font-size: 60px;
+  padding-left: 15px;
+  flex: 0 0 60%;
+}
+
+.science_materials_texts_wrap_descr {
+  max-width: 40%;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+.science_content {
+  padding-top: 70px;
+  display: block;
+}
+
+.science_content .container {
+  margin: 0 56.6px;
+  padding: 0 15px;
+}
+
+.science_content_row1 {
+  display: flex;
+}
+
+.science_content_row1_wrap {
+  padding: 0 15px;
+  margin-bottom: 30px;
+  flex: 0 0 24%;
+  max-width: 24%;
+}
+
+.science_content_row1_wrap_a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.science_content_row1_wrap_a_img_holder {
+  margin-bottom: 17px;
+  width: 297px;
+  height: 280px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.science_content_row1_wrap_a_img_holder img {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+}
+
+.science_content_row1_wrap_a_img_holder img:hover {
+  transform: scale(1.2);
+}
+
+.science_content_row1_wrap_a_img_holder_icon {
+  margin: 35px 43px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  display: block;
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background-size: contain;
+}
+
+.science_content_row1_wrap_a_img_holder_icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: url("../img/main_page/btn_wave_dark.svg") no-repeat 50%;
+  background-size: contain;
+}
+
+.science_content_row1_wrap_a_img_holder_icon div {
+  display: block;
+  top: 96px;
+  left: 100px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.science_content_row1_wrap_a_img_holder_icon div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("https://turanwater.com/assets/img/file.svg") no-repeat 50%/contain;
+  width: 18px;
+  height: 23px;
+  transform: translateX(-22px);
+  top: -2px;
+}
+
+.science_content_row1_wrap_a_img_holder_icon::after {
+  background: url("https://turanwater.com/assets/img/wave_bg.svg") no-repeat 0 0;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 101%;
+  width: 820px;
+  height: 400px;
+  -webkit-transform: translate(40%);
+  -ms-transform: translate(40%);
+  transform: translate(40%);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s,-webkit-transform 1s;
+  z-index: 1;
+  opacity: 0;
+}
+
+.science_content_row1_wrap_a_date {
+  color: #00a0df;
+  margin-bottom: 16px;
+}
+
+.science_content_row1_wrap_a_descr {
+  font-size: 20px;
+  margin-bottom: 16;
+  color: #002856;
+  font-family: 'Montserrat Alternates';
+}
+
+.science_content_row2 {
+  display: flex;
+}
+
+.science_content_row2_wrap1 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  min-height: 18.75rem;
+  position: relative;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+.science_content_row2_wrap1_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.science_content_row2_wrap1_imgInfo {
+  display: flex;
+  margin-top: 320px;
+}
+
+.science_content_row2_wrap1_imgInfo_a {
+  position: relative;
+}
+
+.science_content_row2_wrap1_imgInfo_a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url("../img/main_page/btn_wave_white.svg") no-repeat 50%;
+  background-size: contain;
+  top: -26px;
+  left: 25px;
+}
+
+.science_content_row2_wrap1_imgInfo_a img {
+  position: absolute;
+  top: 7px;
+  left: 60px;
+}
+
+.science_content_row2_wrap1_imgInfo div {
+  max-width: 430px;
+  font-family: 'Montserrat Alternates';
+  font-size: 20px;
+  color: #fff;
+  margin-left: 150px;
+}
+
+.science_content_row3 {
+  display: flex;
+}
+
+footer {
+  margin-top: 30px;
+  background: #dff1fd;
+  padding: 48px 0 32px 0;
+}
+
+footer .container {
+  margin: 0 65px;
+  padding: 0 15px;
+}
+
+footer .container .row {
+  display: flex;
+}
+
+footer .container .row_logo {
+  width: 327px;
+  padding: 0 15px;
+}
+
+footer .container .row_product {
+  width: 327px;
+  padding: 0 15px;
+}
+
+footer .container .row_product_list {
+  list-style: none;
+}
+
+footer .container .row_product_list li {
+  margin-bottom: 20.8px;
+}
+
+footer .container .row_product_list li a {
+  text-decoration: none;
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  color: #182438;
+  font-size: 14px;
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_product_socials {
+  margin-left: 40px;
+}
+
+footer .container .row_product_socials a img {
+  height: 22px;
+  width: 22px;
+}
+
+footer .container .row_product_socials a:first-child {
+  margin-right: 30px;
+}
+
+footer .container .row_main_office {
+  width: 327px;
+  padding: 0 15px;
+  position: relative;
+}
+
+footer .container .row_main_office p {
+  font-family: 'Museo Sans Cyrl 500';
+}
+
+footer .container .row_main_office ul {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+footer .container .row_main_office ul li {
+  margin-bottom: 10px;
+}
+
+footer .container .row_main_office ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #002856;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer .container .row_main_office ul li:first-child a {
+  color: #00a0df;
+}
+
+footer .container .row_main_office ul li:first-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_main_office ul li:last-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_office {
+  font-family: 'Museo Sans Cyrl 300';
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+footer .container .row_office_title {
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 21px;
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_office_contact {
+  list-style: none;
+  margin-bottom: 32px;
+  position: relative;
+  padding-left: 28px;
+}
+
+footer .container .row_office_contact li {
+  margin-bottom: 20px;
+}
+
+footer .container .row_office_contact li a {
+  text-decoration: none;
+  color: #00a0df;
+}
+
+footer .container .row_office_contact li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+}
+
+footer .container .row_office_contact li:last-child a {
+  color: black;
+}
+
+footer .container .row_office_contact li:last-child a::before {
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+}
+
+footer .container .row_office_second_title {
+  margin-bottom: 21px;
+  font-family: 'Museo Sans Cyrl 500';
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_office_second_contact {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+footer .container .row_office_second_contact li {
+  margin-bottom: 21px;
+}
+
+footer .container .row_office_second_contact li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #002856;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer .container .row_office_second_contact li:first-child a {
+  color: #00a0df;
+}
+
+footer .container .row_office_second_contact li:first-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_office_second_contact li:last-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    max-width: 820px;
+  }
+  header {
+    max-width: 820px;
+  }
+  .container {
+    padding: 0 15px;
+    margin: 0 50px;
+  }
+  .container ul {
+    padding: 0;
+  }
+  .science_materials_texts {
+    border-bottom: 1px solid #dff1fd;
+    margin: 0;
+  }
+  .science_materials_texts_wrap {
+    flex-wrap: wrap;
+  }
+  .science_materials_texts_wrap_title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  .science_materials_texts_wrap_descr {
+    flex: 0 0 100%;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 29px;
+  }
+  .science_content .container {
+    margin: 0 50px;
+  }
+  .science_content_row1 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .science_content_row1_wrap {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+  }
+  .science_content_row1_wrap_a_img_holder {
+    margin-bottom: 17px;
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .science_content_row1_wrap_a_img_holder img {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+  }
+  .science_content_row1_wrap_a_img_holder img:hover {
+    transform: scale(1.2);
+  }
+  .science_content_row2 {
+    flex-wrap: wrap;
+  }
+  .science_content_row2_wrap1 {
+    display: flex;
+    flex-direction: row;
+    max-width: 49%;
+  }
+  .science_content_row2_wrap1_img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+  }
+  .science_content_row2_wrap1_imgInfo {
+    display: flex;
+    margin-top: 320px;
+  }
+  .science_content_row3 {
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+  }
+  .science_content_row3_wrap {
+    display: flex;
+    flex-direction: row;
+    max-width: 49%;
+  }
+  .science_content_row3_wrap_a_img_holder1 {
+    margin-bottom: 17px;
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 0;
+  }
+  .science_content_row3_wrap_a_img_holder1 img {
+    width: 100%;
+    height: 100%;
+  }
+  .science_content_row1_wrap1 {
+    padding: 0;
+  }
+  .element1 {
+    position: absolute;
+    top: -450px;
+    right: -50px;
+  }
+  footer {
+    padding: 48px 0 32px;
+    margin: 0 0;
+    max-width: 820px;
+    margin-top: 50px;
+  }
+  footer .container {
+    padding: 0 0px;
+    margin: 0 0px;
+    max-width: 820px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .row {
+    padding: 0 15px;
+    margin: 0 35px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .row_logo {
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+  footer .row_product {
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+  footer .row_product_list {
+    padding: 0;
+  }
+  footer .row_main_office {
+    flex-direction: column;
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+  footer .row_office {
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+}

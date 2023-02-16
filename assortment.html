@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assortment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/assortment.css">
+</head>
+<body onload="animOnScroll()">
+    <section class="burger">
+        <input type="checkbox" id="burger">
+        <label for="burger"></label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about_turan.html">О воде TURAN</a></li>
+                <li><a href="useful.html">Полезно знать</a></li>
+                <li><a href="assortment.html">Ассортимент</a></li>
+                <li><a href="sciencs_materials.html">Научные материалы</a></li>
+                <li><a href="respon.html">Социальная ответсвенность</a></li>
+            </ul>
+        </nav>
+        <div class="burger_logo"></div>
+        <div class="burger_social_link">
+            <a href="https://www.facebook.com/turanwater"><img src="https://turanwater.com/assets/img/fb.svg" alt="facebook_link"></a>
+            <a href="https://www.instagram.com/turanwater/"><img src="https://turanwater.com/assets/img/insta.svg" alt="insta_link"></a>
+        </div>
+    </section>
+    <header>
+        <div class="container">
+            <div clas></div>
+            <a href="index.html" class="header_logo"></a>
+        </div>
+    </header>
+
+    <section class="noSoda">
+        <div class="container">
+            <div class="noSoda_left">
+                <div class="noSoda_left_title _anim-items">Негазированная вода</div>
+                <div class="noSoda_left_descr _anim-items">TURAN попадает к вам в руки в своем первозданном виде – именно такой, как ее создала природа!</div>
+            </div>
+
+            <div class="noSoda_right">
+                <div class="noSoda_right_small">
+                    <div class="noSoda_right_small_content">
+                        <div id="botelke_1" class="noSoda_right_small_content_bottle1" id="botelke_1"></div>
+
+                        <div class="noSoda_right_small_content_bottom">
+                            <p class="noSoda_right_small_content_bottom_text" id="botelke_1_text">стекло <span>0.25л</span></p>
+                            <div class="noSoda_right_small_content_bottom_button">
+                                <button onclick="slider1()" class="noSoda_right_small_content_bottom_button_prev"><img src="img/main_page/left-arrow.svg" alt="left_arrow"></button>
+                                <button onclick="slider1()" class="noSoda_right_small_content_bottom_button_next"><img src="img/main_page/right-arrow.svg" alt="right_arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ratio">
+        <div class="container">
+
+            <div class="ratio_left">
+                <div class="ratio_left_small">
+                    <div class="ratio_left_small_content">
+                        <div class="ratio_left_small_content_bottle1" id="botelke_2"></div>
+
+                        <div class="ratio_left_small_content_bottom">
+                            <p class="ratio_left_small_content_bottom_text" id="botelke_2_text">пэт <span>0.5л</span></p>
+                            <div class="ratio_left_small_content_bottom_button">
+                                <button onclick="slider2()" class="ratio_left_small_content_bottom_button_prev"><img src="img/main_page/left-arrow.svg" alt="left_arrow"></button>
+                                <button onclick="slider2()" class="ratio_left_small_content_bottom_button_next"><img src="img/main_page/right-arrow.svg" alt="right_arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ratio_left_small">
+                    <div class="ratio_left_small_content">
+                        <div class="ratio_left_small_content_bottle2" id="botelke_3"></div>
+                        <div class="ratio_left_small_content_bottom">
+                            <p class="ratio_left_small_content_bottom_text" id="botelke_3_text">пэт <span>5л</span></p>
+                            <div class="ratio_left_small_content_bottom_button">
+                                <button onclick="slider3()" class="ratio_left_small_content_bottom_button_prev"><img src="img/main_page/left-arrow.svg" alt="left_arrow"></button>
+                                <button onclick="slider3()" class="ratio_left_small_content_bottom_button_next"><img src="img/main_page/right-arrow.svg" alt="right_arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ratio_right">
+                <p class="ratio_right_descr _anim-items">Соотношение микро- и макроэлементов в TURAN – оптимальные для питьевой минеральной воды на каждый день.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="soda">
+        <div class="container">
+            
+            <div class="soda_left">
+                <p class="soda_left_title _anim-items">Газированная вода</p>
+                <p class="soda_left_descr _anim-items">TURAN с газом – для любителей воды с пузырьками. 
+                    Благодаря газированию дольше сохраняет природную микрофлору,
+                    которая обогащает воду витаминами и аминокислотами, полезными для организма человека.</p>
+            </div>
+
+            <div class="soda_right">
+                <div class="soda_right_elements">
+                    <div class="soda_right_elements_m1">
+                        <div class="soda_right_elements_m1_icon">
+                            <span class="soda_right_elements_m1_icon_name">Ca</span>
+                            <span class="soda_right_elements_m1_icon_subname">кальций</span>
+                        </div>
+                        <div class="soda_right_elements_m1_text">
+                            Природный “строитель” – укрепляет кости
+                        </div>
+                    </div>
+                    <div class="soda_right_elements_m2">
+                        <div class="soda_right_elements_m2_icon">
+                            <span class="soda_right_elements_m2_icon_name">Mg</span>
+                            <span class="soda_right_elements_m2_icon_subname">магний</span>
+                        </div>
+                        <div class="soda_right_elements_m2_text">
+                            Природный “антистресс” – повышает устойчивость к стрессу
+                        </div>
+                    </div>
+                    <div class="soda_right_elements_m3">
+                        <div class="soda_right_elements_m3_icon">
+                            <span class="soda_right_elements_m3_icon_name">HCO<sub>3</sub></span>
+                            <span class="soda_right_elements_m3_icon_subname">гидрокарбонаты</span>
+                        </div>
+                        <div class="soda_right_elements_m3_text">
+                            Природные “регуляторы” – обеспечивают водно-солевой баланс
+                        </div>
+                    </div>
+                    <div class="soda_right_elements_m4">
+                        <div class="soda_right_elements_m4_icon">
+                            <span class="soda_right_elements_m4_icon_name">Na+K</span>
+                            <span class="soda_right_elements_m4_icon_subname">натрий</span>
+                        </div>
+                        <div class="soda_right_elements_m4_text">
+                            Природные “кардиологи” - регулируют работу сердца
+                        </div>
+                    </div>
+                    <div class="soda_right_elements_m5">
+                        <div class="soda_right_elements_m5_icon">
+                            <span class="soda_right_elements_m5_icon_name">F</span>
+                            <span class="soda_right_elements_m5_icon_subname">фтор</span>
+                        </div>
+                        <div class="soda_right_elements_m5_text">
+                            Природный “стоматолог” – делает улыбку красивой
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ratio2">
+        <div class="container">
+            <div class="ratio2_left">
+                <div class="ratio2_left_small">
+                    <div class="ratio2_left_small_content">
+                        <div class="ratio2_left_small_content_bottle1" id="botelke_4"></div>
+                        <div class="ratio2_left_small_content_bottom">
+                            <p class="ratio2_left_small_content_bottom_text" id="botelke_4_text">стекло <span>0.25л</span></p>
+                            <div class="ratio2_left_small_content_bottom_button">
+                                <button onclick="slider4()" class="ratio2_left_small_content_bottom_button_prev"><img src="img/main_page/left-arrow.svg" alt="left_arrow"></button>
+                                <button onclick="slider4()" class="ratio2_left_small_content_bottom_button_next"><img src="img/main_page/right-arrow.svg" alt="right_arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ratio2_left_small">
+                    <div class="ratio2_left_small_content">
+                        <div class="ratio2_left_small_content_bottle2" id="botelke_5"></div>
+                        <div class="ratio2_left_small_content_bottom">
+                            <p class="ratio2_left_small_content_bottom_text" id="botelke_5_text">пэт <span>0.5л</span></p>
+                            <div class="ratio2_left_small_content_bottom_button">
+                                <button onclick="slider5()" class="ratio2_left_small_content_bottom_button_prev"><img src="img/main_page/left-arrow.svg" alt="left_arrow"></button>
+                                <button onclick="slider5()" class="ratio2_left_small_content_bottom_button_next"><img src="img/main_page/right-arrow.svg" alt="right_arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ratio2_right">
+            </div>
+        </div>
+    </section>
+    
+    <section class="flavor">
+        <div class="container">
+            <div class="flavor_left">
+                <div class="flavor_left_title _anim-items">Вода со вкусом</div>
+                <div class="flavor_left_descr _anim-items">Освежающее сочетание лимона и лайма с витамином С тонизирует организм и укрепляет иммунитет.</div>
+                <div class="flavor_left_descr _anim-items">Нежный вкус персика с витаминами группы В и фолиевой кислотой улучшает настроение и повышает работоспособность.</div>
+                <div class="flavor_left_descr _anim-items">Свежесть грейпфрута с витаминами С, В6 и В12 заряжает энергией и способствует укреплению физического тонуса.</div>
+            </div>
+            <div class="flavor_right">
+                <div class="flavor_right_bottles">
+                    <div class="flavor_right_bottles_left">
+                        <div class="flavor_right_bottles_left_limon">
+                            <img src="img/assortment_page/water-limon.png" alt="limon_bottle" class="flavor_right_bottles_left_limon_img">
+                        </div>
+                        <div class="flavor_right_bottles_left_text">пэт <span>0,5л</span></div>
+                        <div class="flavor_right_bottles_left_desc">Лимон и лайм</div>
+                    </div>
+
+                    <div class="flavor_right_bottles_center">
+                        <div class="flavor_right_bottles_center_peach">
+                            <img src="img/assortment_page/water_peach.png" alt="peach_bottle" class="flavor_right_bottles_center_peach_img">
+                        </div>
+                        <div class="flavor_right_bottles_center_text">пэт <span>0,5л</span></div>
+                        <div class="flavor_right_bottles_center_desc">Персик</div>
+                    </div>
+                    
+                    <div class="flavor_right_bottles_right">
+                        <div class="flavor_right_bottles_right_graphfruit">
+                            <img src="img/assortment_page/water_grayfruit.png" alt="graphfruit_bottle" class="flavor_right_bottles_right_graphfruit_img">
+                        </div>
+                        <div class="flavor_right_bottles_right_text">пэт <span>0,5л</span></div>
+                        <div class="flavor_right_bottles_right_desc">Грейпфрут</div>
+                    </div>
+
+                </div>  
+            </div>
+        </div>
+    </section>
+    
+    <section class="premium">
+        <div class="container">
+            <div class="premium_left">
+                <div class="premium_left_glasses">
+                    <div class="premium_left_glasses_left">
+                        <img src="img/assortment_page/premium-water-dark.png" alt="dark_glass" class="premium_left_glasses_left_botelke">   
+                        <div class="premium_left_glasses_left_text">стекло <span>0.5л</span></div>
+                    </div>
+
+                    <div class="premium_left_glasses_right">
+                        <img src="img/assortment_page/premium-water-light.png" alt="light_glass" class="premium_left_glasses_right_botelke">   
+                        <div class="premium_left_glasses_right_text">стекло <span>0.5л</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="premium_right">
+                <div class="premium_right_title _anim-items">Премиальная серия TURAN в новой бутылке</div>
+                <div class="premium_right_descr _anim-items">Её хрустальные грани повторяют блики кристальной ледниковой воды, а прозрачное стекло символизирует чистейший целебный воздух заповедного края Бурабай. TURAN Premium – драгоценный дар природы для самых требовательных ценителей.</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="row_logo">
+                    <a href="index.html">
+                        <img src="img/main_page/logo/logo_turan.svg" alt="logo_turan">
+                    </a>
+                </div>
+                <div class="row_product">
+                    <ul class="row_product_list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about_turan.html">О воде TURAN</a></li>
+                        <li><a href="useful.html">Полезно знать</a></li>
+                        <li><a href="assortment/html">Ассортимент</a></li>
+                        <li><a href="sciencs_materials.html">Научные материалы</a></li>
+                        <li><a href="respon.html">Социальная ответсвенность</a></li>
+                    </ul>
+                    <div class="row_product_socials">
+                        <a href="https://www.facebook.com/turanwater"><img src="https://turanwater.com/assets/img/fb.svg" alt="fb"></a>
+                        <a href="https://www.instagram.com/turanwater/"><img src="https://turanwater.com/assets/img/insta.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="row_main_office">
+                    <p class="row_main_office_title">Главный офис:</p>
+                    <ul class="row_main_office_contact">
+                        <li><a href="#">+7 727 331 89 59</a></li>
+                        <li><a href="#">pr@globalbeverages.kz</a></li>
+                    </ul>
+                </div>
+                <div class="row_office">
+                    <p class="row_office_title">Офис в России(г.Москва)</p>
+                    <ul class="row_office_contact">
+                        <li><a href="#">+7 977 788 27 87</a></li>
+                        <li><a href="#">+7 926 271 35 08</a></li>
+                        <li><a href="#">constantine.kravtsov@globalbeverages.kz</a></li>
+                    </ul>
+                    <p class="row_office_second_title">
+                        Дистрибутор в Приволжском Федеральном округе (г. Самара)
+                    </p>
+                    <ul class="row_office_second_contact">
+                        <li><a href="#">+7 846 221 81 70</a></li>
+                        <li><a href="#">turan@turanvolga.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/assortment.js"></script>
+</body>
+</html>

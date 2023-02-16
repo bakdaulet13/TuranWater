@@ -1,0 +1,977 @@
+body {
+  font-family: 'Museo Sans Cyrl 300';
+  letter-spacing: -0.24px;
+  line-height: 20px;
+  position: relative;
+  color: #182438;
+}
+
+
+.burger .burger_logo{
+  display: none;
+  position: fixed;
+  width: 106px;
+  height: 54px;
+  top: 40px;
+  left: 77px;
+  z-index: 101;
+  background: url("../img/main_page/logo/logo_turan.svg") no-repeat 50%/cover;
+}
+
+.burger .burger_social_link{
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 105px;
+  z-index: 101;
+}
+
+.burger .burger_social_link a img{
+  height: 22px;
+  width: 22px;
+}
+
+.burger .burger_social_link a img:first-child{
+  margin-right: 25px;
+}
+
+#burger, [for=burger]{
+  cursor: pointer;
+  display: none;
+}
+
+[for=burger]{
+  display: block;
+  width: 30px;
+  font-size: 50px;
+  text-align: center;
+  position: fixed;
+  left: 115px;
+  top: 17px;
+  z-index: 101;
+}
+
+[for=burger]::before{
+  content: '=';
+  color: white;
+}
+
+.burger nav{
+  display: none;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  border: 3px solid orange;
+}
+
+.burger nav ul{
+  text-align: center;
+  margin-top: 180px;
+  padding: 0;
+  list-style-type: none;
+  user-select: none;
+}
+
+.burger nav ul li{
+  margin-bottom: 33px;
+}
+
+.burger nav ul li a{
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: -0.24px;
+  text-decoration: none;  
+  color: #002856;
+  -webkit-text-stroke: 1px #002856;
+  font-family: 'Montserrat Alternates',sans-serif;
+  opacity: 1;
+}
+
+.burger nav ul > li:first-child a{
+  color: #00a0df;
+  -webkit-text-stroke: 1px #00a0df;
+}
+
+.burger nav ul li a:hover{
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+
+#burger:checked + label + nav{
+  display: block;
+  animation: show .5s ease;
+}
+
+#burger:checked + label + nav + .burger_logo{
+  display: block;
+}
+
+#burger:checked + label + nav + .burger_logo + .burger_social_link{
+  display: block;
+}
+
+
+#burger:checked + [for=burger]::before{
+  content: 'X';
+  position: fixed;
+  font-size: 20px;
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  top: -50px;
+  right: -58px;
+  padding-top: 110px;
+  padding-right: 40px;
+  cursor: pointer;
+  color: #00a0df;
+
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  background: url("../img/main_page/btn_wave_dark.svg") no-repeat;
+
+}
+
+
+@keyframes show{
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+
+
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+  transition: opacity 0.5s ease-out;
+}
+
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100px;
+  transition: all .5s ease-out;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) -59.23%, rgba(0, 0, 0, 0));
+}
+
+header .container .header_logo {
+  position: absolute;
+  z-index: 35;
+  display: block;
+  left: 46.5%;
+  background: url("../img/main_page/logo/logo_turan_white.svg") no-repeat 50%/cover;
+  width: 106px;
+  height: 54px;
+}
+
+header .container .header_logo:hover {
+  background: url("../img/main_page/logo/logo_turan.svg") no-repeat 50%/cover;
+}
+
+nav {
+  padding-top: 92px;
+  padding-bottom: 20px;
+}
+
+nav .container {
+  padding: 0 15px;
+  margin: 0 56.6px;
+}
+
+nav .container ul {
+  display: flex;
+  letter-spacing: -0.24px;
+  list-style: none;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 14px;
+  color: #002856;
+}
+
+nav .container ul li .main_page {
+  z-index: 36;
+  opacity: 0.5;
+  position: relative;
+}
+
+nav .container ul li .main_page:hover {
+  opacity: 1.0;
+}
+
+nav .container ul li .main_page::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #002856;
+  position: absolute;
+  left: 47px;
+  top: 7px;
+  margin: 0 12px;
+}
+
+.head {
+  margin-top: -30px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #dff1fd;
+}
+
+.head .container {
+  padding: 0 110px;
+}
+
+.head_wrap {
+  display: flex;
+  width: 1280px;
+}
+
+.head_wrap_big {
+  flex: 0 0 60%;
+  padding-right: 30px;
+}
+
+.head_wrap_big_title {
+  padding-bottom: 50px;
+  font-size: 60px;
+  color: #002856;
+  line-height: 70px;
+  font-family: 'Montserrat Alternates';
+}
+
+.head_wrap_small {
+  flex: 0 0 40%;
+}
+
+.head_wrap_small p {
+  line-height: 32px;
+  color: #002856;
+}
+
+.content {
+  padding-top: 70px;
+  margin-bottom: 30px;
+}
+
+.content .container {
+  padding-left: 105px;
+  padding-right: 105px;
+}
+
+.content .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1310px;
+}
+
+.content .row h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #002856;
+  font-family: 'Montserrat Alternates';
+  margin-left: 15px;
+}
+
+.content .row a {
+  text-decoration: none;
+}
+
+.content .row p {
+  color: #00a0df;
+  margin-bottom: 16px;
+  margin-left: 15px;
+}
+
+.content .row img {
+  object-fit: cover;
+}
+
+.content_first {
+  display: flex;
+}
+
+.content_first_1 {
+  margin: 0 15px;
+  width: 297.5px;
+  margin-bottom: 30px;
+}
+
+.content_first_1 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_first_1 a .hide img {
+  transition: transform .8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_first_1 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_first_2 {
+  margin: 0 15px;
+  width: 625px;
+  margin-bottom: 30px;
+}
+
+.content_first_2 a .hide {
+  width: 625px;
+  height: 380px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content_first_2 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 380px;
+}
+
+.content_first_2 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_first_2 a .hide h2 {
+  position: absolute;
+  z-index: 1;
+  top: 270px;
+  max-width: 452px;
+  margin-left: 95px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.content_first_3 {
+  margin: 0 15px;
+  width: 297.5px;
+  height: 280px;
+  margin-bottom: 30px;
+}
+
+.content_first_3 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_first_3 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_first_3 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_first_curr {
+  display: none;
+}
+
+.content_second {
+  display: flex;
+}
+
+.content_second_1 {
+  width: 297.5px;
+  margin-bottom: 30px;
+  margin: 0 15px;
+}
+
+.content_second_1 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_second_1 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_second_1 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_second_2 {
+  width: 297.5px;
+  margin-bottom: 30px;
+  margin: 0 15px;
+}
+
+.content_second_2 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_second_2 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_second_2 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_second_3 {
+  width: 297.5px;
+  margin-bottom: 30px;
+  margin: 0 15px;
+}
+
+.content_second_3 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_second_3 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_second_3 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_second_4 {
+  width: 297.5px;
+  margin-bottom: 30px;
+  margin: 0 15px;
+}
+
+.content_second_4 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_second_4 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_second_4 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_second_adap {
+  display: none;
+}
+
+.content_third {
+  display: flex;
+}
+
+.content_third div {
+  padding: 0 15px;
+}
+
+.content_third_1 {
+  width: 297.5px;
+  margin-bottom: 30px;
+}
+
+.content_third_1 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_third_1 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_third_1 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_third_2 {
+  width: 297.5px;
+  margin-bottom: 30px;
+}
+
+.content_third_2 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_third_2 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_third_2 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+.content_third_3 {
+  width: 297.5px;
+  margin-bottom: 30px;
+}
+
+.content_third_3 a .hide {
+  width: 297.5px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.content_third_3 a .hide img {
+  transition: transform 0.8s ease;
+  width: 100%;
+  height: 280px;
+}
+
+.content_third_3 a .hide img:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background: #dff1fd;
+  padding: 48px 0 32px 0;
+}
+
+footer .container {
+  margin: 0 65px;
+  padding: 0 15px;
+}
+
+footer .container .row {
+  display: flex;
+}
+
+footer .container .row_logo {
+  width: 327px;
+  padding: 0 15px;
+}
+
+footer .container .row_product {
+  width: 327px;
+  padding: 0 15px;
+}
+
+footer .container .row_product_list {
+  list-style: none;
+}
+
+footer .container .row_product_list li {
+  margin-bottom: 20.8px;
+}
+
+footer .container .row_product_list li a {
+  text-decoration: none;
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  color: #182438;
+  font-size: 14px;
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_product_socials {
+  margin-left: 40px;
+}
+
+footer .container .row_product_socials a img {
+  height: 22px;
+  width: 22px;
+}
+
+footer .container .row_product_socials a:first-child {
+  margin-right: 30px;
+}
+
+footer .container .row_main_office {
+  width: 327px;
+  padding: 0 15px;
+  position: relative;
+}
+
+footer .container .row_main_office p {
+  font-family: 'Museo Sans Cyrl 500';
+}
+
+footer .container .row_main_office ul {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+footer .container .row_main_office ul li {
+  margin-bottom: 10px;
+}
+
+footer .container .row_main_office ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #002856;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer .container .row_main_office ul li:first-child a {
+  color: #00a0df;
+}
+
+footer .container .row_main_office ul li:first-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_main_office ul li:last-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_office {
+  font-family: 'Museo Sans Cyrl 300';
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+footer .container .row_office_title {
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 21px;
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_office_contact {
+  list-style: none;
+  margin-bottom: 32px;
+  position: relative;
+  padding-left: 28px;
+}
+
+footer .container .row_office_contact li {
+  margin-bottom: 20px;
+}
+
+footer .container .row_office_contact li a {
+  text-decoration: none;
+  color: #00a0df;
+}
+
+footer .container .row_office_contact li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+}
+
+footer .container .row_office_contact li:last-child a {
+  color: black;
+}
+
+footer .container .row_office_contact li:last-child a::before {
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+}
+
+footer .container .row_office_second_title {
+  margin-bottom: 21px;
+  font-family: 'Museo Sans Cyrl 500';
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_office_second_contact {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+footer .container .row_office_second_contact li {
+  margin-bottom: 21px;
+}
+
+footer .container .row_office_second_contact li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #002856;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer .container .row_office_second_contact li:first-child a {
+  color: #00a0df;
+}
+
+footer .container .row_office_second_contact li:first-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_office_second_contact li:last-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+@media screen and (max-width: 820px) {
+  header {
+    max-width: 820px;
+  }
+  header .container .qwerty {
+    margin-left: -30px;
+  }
+  .head {
+    max-width: 820px;
+  }
+  .head .container {
+    padding: 0 0;
+    max-width: 820px;
+  }
+  .head_wrap {
+    max-width: 820px;
+    flex-wrap: wrap;
+  }
+  .head_wrap_big_title {
+    font-size: 40px;
+    margin-left: 65px;
+    line-height: 50px;
+  }
+  .head_wrap_small {
+    margin-top: -60px;
+    width: 690px;
+    flex: 0 100%;
+  }
+  .head_wrap_small p {
+    margin-left: 65px;
+    max-width: 690px;
+  }
+  .content {
+    max-width: 820px;
+  }
+  .content .container {
+    padding: 0 0;
+    margin: 0 0;
+    max-width: 820px;
+  }
+  .content .row {
+    padding: 0 0;
+    margin: 0 0;
+    max-width: 820px;
+  }
+  .content .row h2 {
+    margin-left: 0;
+  }
+  .content .row p {
+    margin-left: 0;
+  }
+  .content_first {
+    margin: 0 0;
+    flex-wrap: wrap;
+    padding: 0 50px;
+  }
+  .content_first_1 {
+    width: 330px;
+    margin: 0 0;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .content_first_1 a .hide {
+    width: 330px;
+  }
+  .content_first_1 a .hide img {
+    width: 330px;
+  }
+  .content_first_2 {
+    width: 330px;
+    margin: 0 15px;
+  }
+  .content_first_2 a .hide {
+    width: 330px;
+  }
+  .content_first_2 a .hide img {
+    width: 330px;
+  }
+  .content_first_3 {
+    width: 330px;
+    margin: 0 15px;
+    margin-top: 30px;
+  }
+  .content_first_3 a .hide {
+    width: 330px;
+  }
+  .content_first_3 a .hide img {
+    width: 330px;
+  }
+  .content_first_curr {
+    display: block;
+    width: 330px;
+    margin: 0 15px;
+    margin-top: 30px;
+  }
+  .content_first_curr a .hide {
+    width: 330px;
+  }
+  .content_first_curr a .hide img {
+    width: 330px;
+    height: 280px;
+  }
+  .content_second {
+    margin: 0 0;
+    flex-wrap: wrap;
+    padding: 0 50px;
+  }
+  .content_second_1 {
+    display: none;
+  }
+  .content_second_2 {
+    width: 330px;
+    margin: 0 15px;
+    margin-top: 30px;
+  }
+  .content_second_2 a .hide {
+    width: 330px;
+  }
+  .content_second_2 a .hide img {
+    width: 330px;
+  }
+  .content_second_3 {
+    width: 330px;
+    margin: 0 15px;
+    margin-top: 30px;
+  }
+  .content_second_3 a .hide {
+    width: 330px;
+  }
+  .content_second_3 a .hide img {
+    width: 330px;
+  }
+  .content_second_4 {
+    width: 330px;
+    margin: 0 15px;
+    margin-top: 30px;
+  }
+  .content_second_4 a .hide {
+    width: 330px;
+  }
+  .content_second_4 a .hide img {
+    width: 330px;
+  }
+  .content_second_adap {
+    display: block;
+    width: 330px;
+    margin: 0 15px;
+    margin-top: 30px;
+  }
+  .content_second_adap a .hide {
+    width: 330px;
+  }
+  .content_second_adap a .hide img {
+    width: 330px;
+    height: 280px;
+  }
+  .content_third {
+    margin: 0 0;
+    flex-wrap: wrap;
+    padding: 0 50px;
+  }
+  .content_third_1 {
+    display: none;
+  }
+  .content_third_2 {
+    display: block;
+    width: 330px;
+    margin: 0 0;
+    margin-top: 30px;
+    margin-left: -15px;
+  }
+  .content_third_2 a .hide {
+    width: 330px;
+  }
+  .content_third_2 a .hide img {
+    width: 330px;
+    height: 280px;
+  }
+  .content_third_3 {
+    display: block;
+    width: 330px;
+    margin: 0 0;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  .content_third_3 a .hide {
+    width: 330px;
+  }
+  .content_third_3 a .hide img {
+    width: 330px;
+    height: 280px;
+  }
+  footer {
+    height: 612px;
+    padding: 48px 0 32px; 
+  }
+  footer .container {
+    margin: 0;
+    padding: 0 15px; 
+  }
+  footer .row {
+    flex-wrap: wrap;
+  }
+  footer .row_logo {
+    width: 330px;
+    height: 290px; 
+    margin-left: 30px; 
+    padding: 0 15px;
+  }
+  footer .row_product {
+    width: 330px;
+    height: 290px; 
+    padding: 0 15px;
+  }
+  footer .row_product_list {
+    width: 330px; 
+    height: 302px;
+    margin-left: 30px; 
+    padding: 0 15px;
+  }
+  footer .row_office{
+    width: 330px;
+    margin-left: 40px; 
+    height: 302px;
+    padding: 0 15px;
+  }
+  footer .row_main_office{
+    margin-left: 30px;
+  }
+}

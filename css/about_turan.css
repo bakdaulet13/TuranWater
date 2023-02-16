@@ -1,0 +1,1616 @@
+body {
+  font-family: 'Museo Sans Cyrl 300';
+  letter-spacing: -0.24px;
+}
+
+.burger .burger_logo{
+  display: none;
+  position: fixed;
+  width: 106px;
+  height: 54px;
+  top: 40px;
+  left: 77px;
+  z-index: 101;
+  background: url("../img/main_page/logo/logo_turan.svg") no-repeat 50%/cover;
+}
+
+.burger .burger_social_link{
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 105px;
+  z-index: 101;
+}
+
+.burger .burger_social_link a img{
+  height: 22px;
+  width: 22px;
+}
+
+.burger .burger_social_link a img:first-child{
+  margin-right: 25px;
+}
+
+#burger, [for=burger]{
+  cursor: pointer;
+  display: none;
+}
+
+[for=burger]{
+  display: block;
+  width: 30px;
+  font-size: 50px;
+  text-align: center;
+  position: fixed;
+  left: 115px;
+  top: 17px;
+  z-index: 101;
+}
+
+[for=burger]::before{
+  content: '=';
+  color: white;
+}
+
+.burger nav{
+  display: none;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  border: 3px solid orange;
+}
+
+.burger nav ul{
+  text-align: center;
+  margin-top: 180px;
+  padding: 0;
+  list-style-type: none;
+  user-select: none;
+}
+
+.burger nav ul li{
+  margin-bottom: 33px;
+}
+
+.burger nav ul li a{
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: -0.24px;
+  text-decoration: none;  
+  color: #002856;
+  -webkit-text-stroke: 1px #002856;
+  font-family: 'Montserrat Alternates',sans-serif;
+  opacity: 1;
+}
+
+.burger nav ul > li:first-child a{
+  color: #00a0df;
+  -webkit-text-stroke: 1px #00a0df;
+}
+
+.burger nav ul li a:hover{
+  color: white;
+  transition: all 0.5s ease 0s;
+}
+
+#burger:checked + label + nav{
+  display: block;
+  animation: show .5s ease;
+}
+
+#burger:checked + label + nav + .burger_logo{
+  display: block;
+}
+
+#burger:checked + label + nav + .burger_logo + .burger_social_link{
+  display: block;
+}
+
+
+#burger:checked + [for=burger]::before{
+  content: 'X';
+  position: fixed;
+  font-size: 20px;
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  top: -50px;
+  right: -58px;
+  padding-top: 110px;
+  padding-right: 40px;
+  cursor: pointer;
+  color: #00a0df;
+
+  text-align: center;
+  width: 180px;
+  height: 180px;
+  background: url("../img/main_page/btn_wave_dark.svg") no-repeat;
+
+}
+
+
+@keyframes show{
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+
+
+header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 30;
+  transition: opacity 0.5s ease-out;
+}
+
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100px;
+  transition: all .5s ease-out;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) -59.23%, rgba(0, 0, 0, 0));
+}
+
+header .container .header_logo {
+  position: absolute;
+  z-index: 35;
+  display: block;
+  left: 46.5%;
+  background: url("../img/main_page/logo/logo_turan_white.svg") no-repeat 50%/cover;
+  width: 106px;
+  height: 54px;
+}
+
+header .container .header_logo:hover {
+  background: url("../img/main_page/logo/logo_turan.svg") no-repeat 50%/cover;
+}
+
+nav {
+  padding-top: 86px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+nav .container {
+  padding: 0 15px;
+  margin: 0 56.6px;
+}
+
+nav .container ul {
+  display: flex;
+  letter-spacing: -0.24px;
+  list-style: none;
+}
+
+nav .container ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 25px;
+}
+
+nav .container ul li .main_page {
+  z-index: 36;
+  opacity: 0.5;
+  position: relative;
+}
+
+nav .container ul li .main_page:hover {
+  opacity: 1.0;
+}
+
+nav .container ul li .main_page::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 50px;
+  top: 8px;
+  margin: 0 12px;
+}
+
+.born {
+  min-height: 100vh;
+}
+
+.born img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.born_content {
+  padding: 113px 107px;
+}
+
+.born_content_title {
+  color: #fff;
+  font-size: 60px;
+  margin-bottom: 30px;
+  font-family: 'Montserrat Alternates';
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.born_content_title._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.born_content_descr {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ffffff;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+
+.born_content_descr._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.born_content_subtitle {
+  font-size: 150px;
+  font-family: 'Montserrat Alternates';
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #fff;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+.born_content_subtitle._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.born_wave {
+  background: url(" https://turanwater.com/assets/img/bottom-wave.svg") repeat-x 0 100%/contain;
+  position: absolute;
+  top: 713px;
+  width: 100%;
+  height: 18px;
+}
+
+.bubbles .first {
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: all 4s ease 0s;
+  width: 93px;
+  height: 93px;
+  right: 590px;
+  top: 730px;
+  opacity: 0.5;
+}
+
+.bubbles .second {
+  position: absolute;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: all 4s ease 0.6s;
+  width: 42px;
+  height: 42px;
+  right: 400px;
+  top: 724px;
+}
+
+.bubbles .third {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 4s ease 1s;
+  width: 28px;
+  height: 28px;
+  right: 585px;
+  top: 725px;
+}
+
+.first._active {
+  transform: translateY(-1000px) scale(1.5, 1.5);
+}
+
+.second._active {
+  transform: translateY(-1000px) scale(1.5, 1.5);
+}
+
+.third._active {
+  transform: translateY(-1000px) scale(1.5, 1.5);
+}
+
+.origin {
+  padding: 0 0 80px 0;
+}
+
+.origin .container {
+  padding: 0 15px;
+  margin: 0 76px;
+}
+
+.origin .types_bubbles div {
+  position: absolute;
+  border-radius: 50%;
+  bottom: -900px;
+  z-index: 1;
+}
+
+.origin_title {
+  font-family: 'Montserrat Alternates';
+  font-size: 66px;
+  margin-bottom: 64px;
+  color: #002856;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.origin_title._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.origin_title span {
+  color: #00a0df;
+}
+
+.origin_text {
+  max-width: 385px;
+  margin-left: auto;
+  margin-top: 110px;
+  line-height: 29px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.origin_text._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.types_bubbles .fourth {
+  opacity: 0;
+  transition: all 8s ease 0s;
+  width: 57px;
+  height: 57px;
+  background: #00a0df;
+  left: 85%;
+}
+
+.fourth._active {
+  transform: translateY(-2300px) scale(1.5, 1.5);
+  opacity: 1;
+}
+
+.fifth {
+  opacity: 0;
+  transition: all 8s ease 0.5s;
+  width: 21px;
+  height: 21px;
+  background: #00a0df;
+  left: 81%;
+}
+
+.fifth._active {
+  transform: translateY(-2300px) scale(1.5, 1.5);
+  opacity: 1;
+}
+
+.sixth {
+  opacity: 0;
+  transition: all 8s ease 0.6s;
+  width: 46px;
+  height: 46px;
+  background: #00a0df;
+  left: 63%;
+}
+
+.sixth._active {
+  transform: translateY(-2300px) scale(1.5, 1.5);
+  opacity: 1;
+}
+
+.seventh {
+  opacity: 0;
+  transition: all 8s ease 0.8s;
+  width: 31px;
+  height: 31px;
+  left: 33%;
+  background: #00a0df;
+}
+
+.seventh._active {
+  transform: translateY(-2300px) scale(1.5, 1.5);
+  opacity: 1;
+}
+
+.origin_mountain {
+  max-width: 755px;
+  height: 395px;
+  background: url("https://turanwater.com/assets/img/mount.svg") no-repeat center top 25%/contain;
+  margin: -25px auto 0;
+  position: relative;
+}
+
+.origin_mountain_depth {
+  font-family: 'Museo Sans Cyrl 500';
+  display: flex;
+  flex-direction: column;
+}
+
+.origin_mountain_depth span {
+  font-size: 50px;
+  font-family: 'Montserrat Alternates';
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #00a0df;
+}
+
+.origin_mountain_temp {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-family: 'Museo Sans Cyrl 500';
+  right: 60px;
+  bottom: 0;
+  margin-left: auto;
+  color: #182438;
+}
+
+.origin_mountain_temp span {
+  font-size: 50px;
+  font-family: 'Montserrat Alternates';
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #00a0df;
+}
+
+.prepare {
+  background: url("../img/about_page/tamshy_bg.jpg") no-repeat 50%/cover;
+  padding: 150px 0;
+  position: relative;
+  height: 500px;
+}
+
+.prepare .container {
+  margin: 0 56.6px;
+  padding: 0 15px;
+}
+
+.prepare .row {
+  display: flex;
+}
+
+.prepare_wrap {
+  margin-left: 30px;
+}
+
+.prepare_wrap_title {
+  margin-top: 50px;
+  max-width: 410px;
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Montserrat Alternates';
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.prepare_wrap_title._active, .prepare_wrap_descr._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.prepare_wrap_descr {
+  line-height: 29px;
+  max-width: 410px;
+  color: #fff;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+
+.prepare_picture {
+  display: block;
+  margin-left: 380px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out 0.6s;
+}
+
+.prepare_picture._active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ozon {
+  padding: 110px 30px;
+  position: relative;
+}
+
+.ozon .container {
+  margin: 0 56.6px;
+  padding: 0 15px;
+}
+
+.ozon_row {
+  display: flex;
+}
+
+.ozon_turan_img {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out 0.6s;
+}
+
+.ozon_turan_img img {
+  padding: 0 15px;
+  max-width: 400px;
+  object-fit: contain;
+}
+
+.ozon_turan_img._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ozon_wrap {
+  margin-left: 114px;
+}
+
+.ozon_wrap_title {
+  font-family: 'Montserrat Alternates';
+  color: #002856;
+  font-size: 60px;
+  margin-bottom: 34px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.ozon_wrap_title._active, .ozon_wrap_descr._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ozon_wrap_descr {
+  max-width: 600px;
+  line-height: 29px;
+  color: #182438;
+  margin-bottom: 95px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+
+.ozon_wrap_img {
+  width: 100%;
+  max-width: 280px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out 1s;
+}
+
+.ozon_wrap_img._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bottling {
+  padding: 40px 0;
+}
+
+.bottling .container {
+  padding: 0 115px;
+}
+
+.bottling .row {
+  width: 1310px;
+  display: flex;
+}
+
+.bottling_title {
+  width: 25%;
+  margin-right: 25px;
+  font-family: 'Montserrat Alternates';
+  color: #002856;
+  line-height: 19.2px;
+  font-size: 60px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out 0s;
+}
+
+.bottling_wrap {
+  width: 75%;
+}
+
+.bottling_title._active, .bottling_wrap_descr._active, .bottling_wrap_hour._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.bottling_wrap_descr {
+  max-width: 560px;
+  color: #182438;
+  margin-bottom: 55px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out 0.2s;
+}
+
+.bottling_wrap_hour {
+  font-size: 50px;
+  -webkit-text-stroke: 1px #00a0df;
+  font-family: 'Montserrat Alternates';
+  color: rgba(0, 0, 0, 0);
+  line-height: 28px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out 0.3s;
+}
+
+.bottling_slider {
+  height: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.bottling_slider_path {
+  display: flex;
+  position: relative;
+  transition: all ease 1s;
+}
+
+.bottling_slider_path img {
+  height: 500px;
+  margin: 0 15px;
+  float: left;
+}
+
+.bottling_slider_path::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.control {
+  margin-top: 50px;
+  padding: 165px 0;
+  background: url(../img/about_page/double_control_bg.jpg) no-repeat 50%/cover;
+}
+
+.control .container {
+  padding: 0 100px;
+}
+
+.control .row {
+  display: flex;
+  width: 1310px;
+  color: #fff;
+}
+
+.control_right {
+  padding: 0 15px;
+  width: 50%;
+}
+
+.control_right_title {
+  margin-bottom: 34px;
+  font-size: 60px;
+  font-family: 'Montserrat Alternates';
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.control_right_descr {
+  line-height: 29px;
+  max-width: 460px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1.4s ease-out;
+}
+
+.control_right_title._active, .control_right_descr._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.control_left {
+  padding: 0 15px;
+  width: 50%;
+}
+
+.control_left_title {
+  margin-bottom: 34px;
+  font-size: 60px;
+  font-family: 'Montserrat Alternates';
+  margin-left: 35px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1.6s ease-out;
+}
+
+.control_left_title._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.control_left_calendar {
+  line-height: 20px;
+}
+
+.control_left_calendar li {
+  list-style: none;
+  padding-left: 60px;
+  margin-bottom: 30px;
+}
+
+.control_left_calendar li p {
+  max-width: 480px;
+}
+
+.control_left_calendar_first._active, .control_left_calendar_second._active, .control_left_calendar_third._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.control_left_calendar_first {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+.control_left_calendar_first_title {
+  text-transform: uppercase;
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 5px;
+}
+
+.control_left_calendar_first_days {
+  position: absolute;
+  background: url("https://turanwater.com/assets/img/calendar.svg") no-repeat 50%/contain;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  width: 39px;
+  height: 35px;
+  padding-top: 8px;
+  left: 0;
+  top: -13px;
+}
+
+.control_left_calendar_second {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2.4s ease-out;
+}
+
+.control_left_calendar_second_title {
+  text-transform: uppercase;
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 5px;
+}
+
+.control_left_calendar_second_days {
+  position: absolute;
+  background: url("https://turanwater.com/assets/img/calendar.svg") no-repeat 50%/contain;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  width: 39px;
+  height: 35px;
+  padding-top: 8px;
+  left: 0;
+  top: -13px;
+}
+
+.control_left_calendar_third {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 3s ease-out;
+}
+
+.control_left_calendar_third_title {
+  text-transform: uppercase;
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 5px;
+}
+
+.control_left_calendar_third_days {
+  position: absolute;
+  background: url("https://turanwater.com/assets/img/calendar.svg") no-repeat 50%/contain;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  width: 39px;
+  height: 35px;
+  padding-top: 8px;
+  left: 0;
+  top: -13px;
+}
+
+.composition {
+  padding-top: 112px;
+  padding-bottom: 96px;
+  position: relative;
+}
+
+.composition .container {
+  padding: 0 80px;
+}
+
+.composition_img {
+  position: absolute;
+  right: 100px;
+  top: 230px;
+  width: 285px;
+}
+
+.composition_wrap_content {
+  padding-left: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.composition_wrap_content_title {
+  margin-left: -20px;
+  font-size: 150px;
+  margin-bottom: 48px;
+  -webkit-text-stroke: 1px #00a0df;
+  font-family: 'Montserrat Alternates';
+  color: rgba(0, 0, 0, 0);
+}
+
+.composition_wrap_content_title_1 {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+.composition_wrap_content_title_2 {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+.composition_wrap_content_title_1._active, .composition_wrap_content_title_2._active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.composition_wrap_content_descr {
+  margin-right: 40px;
+  max-width: 365px;
+  line-height: 28px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.composition_wrap_content_descr._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.composition_wrap_content_descr p {
+  margin-bottom: 32px;
+  color: #182438;
+}
+
+.composition_wrap_content_elements {
+  width: 350px;
+  margin: 0 auto 0 40px;
+  height: 329px;
+}
+
+.composition_wrap_content_elements_m1 {
+  margin: 0;
+  width: 92px;
+  height: 92px;
+  margin-bottom: 24px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1.4s ease-out;
+}
+
+.composition_wrap_content_elements_m1._active, .composition_wrap_content_elements_m2._active, .composition_wrap_content_elements_m3._active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.composition_wrap_content_elements_m1_text {
+  display: none;
+}
+
+.composition_wrap_content_elements_m1_icon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dff1fd;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  line-height: 19.2px;
+}
+
+.composition_wrap_content_elements_m1_icon:hover {
+  border: 1px solid #00a0df;
+}
+
+.composition_wrap_content_elements_m1_icon_name {
+  margin-top: 25px;
+  font-size: 24px;
+  font-family: 'Museo Sans Cyrl 500';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.composition_wrap_content_elements_m1_icon_subname {
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+.composition_wrap_content_elements_m2 {
+  width: 92px;
+  height: 92px;
+  margin: -50px 0 0 auto;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease-out;
+}
+
+.composition_wrap_content_elements_m2_text {
+  display: none;
+}
+
+.composition_wrap_content_elements_m2_icon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dff1fd;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  line-height: 19.2px;
+}
+
+.composition_wrap_content_elements_m2_icon:hover {
+  border: 1px solid #00a0df;
+}
+
+.composition_wrap_content_elements_m2_icon_name {
+  margin-top: 25px;
+  font-size: 24px;
+  font-family: 'Museo Sans Cyrl 500';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.composition_wrap_content_elements_m2_icon_subname {
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+.composition_wrap_content_elements_m3 {
+  margin: -30px auto 0 90px;
+  width: 112px;
+  height: 112px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2.4s ease-out;
+}
+
+.composition_wrap_content_elements_m3_text {
+  display: none;
+}
+
+.composition_wrap_content_elements_m3_icon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dff1fd;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  line-height: 19.2px;
+}
+
+.composition_wrap_content_elements_m3_icon:hover {
+  border: 1px solid #00a0df;
+}
+
+.composition_wrap_content_elements_m3_icon_name {
+  margin-top: 35px;
+  font-size: 24px;
+  font-family: 'Museo Sans Cyrl 500';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.composition_wrap_content_elements_m3_icon_subname {
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+.composition_wrap_content_elements_m4 {
+  width: 94px;
+  height: 94px;
+  margin-bottom: 0;
+  margin-right: auto;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2.6s ease-out;
+}
+
+.composition_wrap_content_elements_m4_text {
+  display: none;
+}
+
+.composition_wrap_content_elements_m4_icon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dff1fd;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  line-height: 19.2px;
+}
+
+.composition_wrap_content_elements_m4_icon:hover {
+  border: 1px solid #00a0df;
+}
+
+.composition_wrap_content_elements_m4_icon_name {
+  margin-top: 29px;
+  font-size: 24px;
+  font-family: 'Museo Sans Cyrl 500';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.composition_wrap_content_elements_m4_icon_subname {
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+.composition_wrap_content_elements_m5 {
+  margin: -55px 40px 0 auto;
+  margin-left: 236px;
+  width: 74px;
+  height: 74px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 3s ease-out;
+}
+
+.composition_wrap_content_elements_m5._active, .composition_wrap_content_elements_m4._active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.composition_wrap_content_elements_m5_text {
+  display: none;
+}
+
+.composition_wrap_content_elements_m5_icon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dff1fd;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  line-height: 19.2px;
+}
+
+.composition_wrap_content_elements_m5_icon:hover {
+  border: 1px solid #00a0df;
+}
+
+.composition_wrap_content_elements_m5_icon_name {
+  margin-top: 15px;
+  font-size: 24px;
+  font-family: 'Museo Sans Cyrl 500';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.composition_wrap_content_elements_m5_icon_subname {
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer {
+  padding: 48px 0 32px 0;
+  background: #dff1fd;
+}
+
+footer .container {
+  margin: 0 65px;
+  padding: 0 15px;
+}
+
+footer .container .row {
+  display: flex;
+}
+
+footer .container .row_logo {
+  width: 327px;
+  padding: 0 15px;
+}
+
+footer .container .row_product {
+  width: 327px;
+  padding: 0 15px;
+}
+
+footer .container .row_product_list {
+  list-style: none;
+}
+
+footer .container .row_product_list li {
+  margin-bottom: 20.8px;
+}
+
+footer .container .row_product_list li a {
+  text-decoration: none;
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  color: #182438;
+  font-size: 14px;
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_product_socials {
+  margin-left: 40px;
+}
+
+footer .container .row_product_socials a img {
+  height: 22px;
+  width: 22px;
+}
+
+footer .container .row_product_socials a:first-child {
+  margin-right: 30px;
+}
+
+footer .container .row_main_office {
+  width: 327px;
+  padding: 0 15px;
+  position: relative;
+}
+
+footer .container .row_main_office p {
+  font-family: 'Museo Sans Cyrl 500';
+}
+
+footer .container .row_main_office ul {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+footer .container .row_main_office ul li {
+  margin-bottom: 10px;
+}
+
+footer .container .row_main_office ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #002856;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer .container .row_main_office ul li:first-child a {
+  color: #00a0df;
+}
+
+footer .container .row_main_office ul li:first-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_main_office ul li:last-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_office {
+  font-family: 'Museo Sans Cyrl 300';
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+footer .container .row_office_title {
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 21px;
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_office_contact {
+  list-style: none;
+  margin-bottom: 32px;
+  position: relative;
+  padding-left: 28px;
+}
+
+footer .container .row_office_contact li {
+  margin-bottom: 20px;
+}
+
+footer .container .row_office_contact li a {
+  text-decoration: none;
+  color: #00a0df;
+}
+
+footer .container .row_office_contact li a::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+}
+
+footer .container .row_office_contact li:last-child a {
+  color: black;
+}
+
+footer .container .row_office_contact li:last-child a::before {
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+}
+
+footer .container .row_office_second_title {
+  margin-bottom: 21px;
+  font-family: 'Museo Sans Cyrl 500';
+  letter-spacing: -0.24px;
+}
+
+footer .container .row_office_second_contact {
+  padding-left: 28px;
+  position: relative;
+  list-style: none;
+}
+
+footer .container .row_office_second_contact li {
+  margin-bottom: 21px;
+}
+
+footer .container .row_office_second_contact li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #002856;
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+footer .container .row_office_second_contact li:first-child a {
+  color: #00a0df;
+}
+
+footer .container .row_office_second_contact li:first-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/phone.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+footer .container .row_office_second_contact li:last-child::before {
+  position: absolute;
+  content: "";
+  background: url("https://turanwater.com/assets/img/email.svg") no-repeat 0/contain;
+  width: 18px;
+  height: 18px;
+  left: 0;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    max-width: 820px;
+  }
+  header {
+    max-width: 820px;
+  }
+  .born {
+    min-height: 700px;
+  }
+  .born_content {
+    max-width: 800px;
+    padding: 0 65px;
+    margin-top: 300px;
+  }
+  .born_content_subtitle {
+    font-size: 110px;
+  }
+  .born_wave {
+    top: 1164px;
+  }
+  .bubbles .first {
+    right: 590px;
+    top: 1175px;
+  }
+  .bubbles .second {
+    right: 400px;
+    top: 1175px;
+  }
+  .bubbles .third {
+    right: 585px;
+    top: 1175px;
+  }
+  .first._active {
+    transform: translateY(-1400px) scale(1.5, 1.5);
+  }
+  .second._active {
+    transform: translateY(-1400px) scale(1.5, 1.5);
+  }
+  .third._active {
+    transform: translateY(-1400px) scale(1.5, 1.5);
+  }
+  .origin {
+    padding: 100px 0 80px;
+  }
+  .origin .container {
+    margin: 0 50px;
+  }
+  .origin_title {
+    font-size: 50px;
+    line-height: 1.5;
+  }
+  .prepare {
+    padding: 120px 0;
+    max-height: 367px;
+  }
+  .prepare .container {
+    margin: 0 50px;
+  }
+  .prepare .container .row {
+    flex-wrap: wrap;
+  }
+  .prepare_wrap {
+    flex: 0 0 50%;
+    margin: 0;
+    padding: 0 15px;
+  }
+  .prepare_wrap_title {
+    font-size: 42px;
+    margin-bottom: 32px;
+    max-width: 410px;
+  }
+  .prepare_wrap_descr {
+    max-width: 410px;
+  }
+  .prepare_picture {
+    flex: 0 0 50%;
+  }
+  .prepare_picture img {
+    max-width: 330px;
+    margin-top: -270px;
+  }
+  .ozon {
+    padding: 110px 0;
+  }
+  .ozon .container {
+    margin: 0 50px;
+  }
+  .ozon_row {
+    flex-wrap: wrap;
+  }
+  .ozon_turan_img {
+    position: absolute;
+    top: 380px;
+  }
+  .ozon_turan_img img {
+    max-width: 340px;
+  }
+  .ozon_wrap {
+    margin-left: 14px;
+  }
+  .ozon_wrap_title {
+    margin-bottom: 34px;
+    font-size: 42px;
+  }
+  .ozon_wrap_img {
+    width: 230px;
+    margin-left: 438px;
+    margin-top: 130px;
+  }
+  .bottling {
+    padding: 50px 0;
+    height: 750px;
+  }
+  .bottling .container {
+    margin: 0 50px;
+    padding: 0 15px;
+  }
+  .bottling .container .row {
+    flex-wrap: wrap;
+    width: 720px;
+  }
+  .bottling_title {
+    margin-bottom: 55px;
+    font-size: 42px;
+  }
+  .bottling_wrap_descr {
+    line-height: 29px;
+    letter-spacing: -0.24px;
+  }
+  .bottling_wrap_hour {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+  .bottling_slider {
+    margin: 0;
+    margin-top: 70px;
+  }
+  .bottling_slider_path {
+    height: 380px;
+  }
+  .bottling_slider_path img {
+    height: 380px;
+    width: 450px;
+  }
+  .control {
+    padding: 110px 0;
+    margin: 0;
+  }
+  .control .container {
+    padding: 0 15px;
+    margin: 0 50px;
+  }
+  .control .container .row {
+    max-width: 720px;
+  }
+  .control_right {
+    padding: 0;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  .control_right_title {
+    font-size: 39px;
+  }
+  .control_right_descr {
+    max-width: 320px;
+  }
+  .control_left {
+    margin-left: -30px;
+    padding: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .control_left_title {
+    font-size: 39px;
+    margin-bottom: 34px;
+  }
+  .control_left_calendar p {
+    line-height: 29px;
+  }
+  .composition {
+    padding: 70px 0;
+    margin-bottom: 50px;
+  }
+  .composition .container {
+    margin: 0 50px;
+    padding: 0 15px;
+  }
+  .composition_wrap_content {
+    padding-left: 48px;
+  }
+  .composition_wrap_content_title {
+    font-size: 42px;
+    margin-bottom: 34px;
+  }
+  .composition_wrap_content_title_1 {
+    font-size: 95px;
+  }
+  .composition_wrap_content_title_2 {
+    font-size: 95px;
+  }
+  .composition_wrap_content_descr {
+    max-width: 500px;
+    margin: 30px 40px 30px 0;
+  }
+  .composition_wrap_content_elements {
+    margin-left: 0;
+    max-width: 350px;
+  }
+  .composition_img {
+    width: 24%;
+    right: 30px;
+    top: 534px;
+  }
+  footer {
+    padding: 48px 0 32px;
+    margin: 0 0;
+    max-width: 820px;
+  }
+  footer .container {
+    padding: 0 0px;
+    margin: 0 0px;
+    max-width: 820px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .row {
+    padding: 0 15px;
+    margin: 0 35px;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .row_logo {
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+  footer .row_product {
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+  footer .row_product_list {
+    padding: 0;
+  }
+  footer .row_main_office {
+    flex-direction: column;
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+  footer .row_office {
+    flex: 0 0 50%;
+    max-width: 330px;
+  }
+}
